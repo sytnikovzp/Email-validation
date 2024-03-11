@@ -47,7 +47,7 @@ label {
   align-items: center;
 }
 
-.error-message {
+#error-message {
   border: 1px solid red;
   color: red;
   font-size: 12px;
