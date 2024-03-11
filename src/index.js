@@ -37,4 +37,4 @@ function emailValid(e) {
   return 'error';
 }
 
-btnOk.addEventListener('click', emailValid);
+emailInput.addEventListener('click', emailValid);
