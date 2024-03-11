@@ -4,17 +4,14 @@ let email;
 
 const btnOk = document.querySelector('#btn-container > button:last-child');
 const emailInput = document.querySelector('#email');
-
-emailInput.addEventListener('change', (e) => {
-  email = e.target.value;
-});
-
-// ----------------------------------------------------------
-
 const divEmail = document.querySelector('.div-email');
 const errormsg = document.createElement('div');
 errormsg.classList.add('error-message');
 errormsg.textContent = 'Wrong email!';
+
+emailInput.addEventListener('change', (e) => {
+  email = e.target.value;
+});
 
 function emailValid(e) {
   e.preventDefault();
@@ -22,7 +19,7 @@ function emailValid(e) {
   if (reg.test(email)) {
     emailInput.classList.remove('checkValid_invalid');
     emailInput.classList.add('checkValid_valid');
-    
+
     if (emailInput.nextElementSibling) {
       emailInput.nextElementSibling.remove();
     }
